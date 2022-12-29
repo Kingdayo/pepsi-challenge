@@ -74,6 +74,7 @@
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 1em;
+    cursor: pointer;
 }
 
 .container main div:nth-child(2){
@@ -94,9 +95,9 @@
 }
 
 .container main div:nth-child(3) img{
-    height: 30px;
-    width: 30px;
-    margin-bottom: 2em;
+    height: 20px;
+    width: 20px;
+    margin-bottom: 3em;
     cursor: pointer;
 }
 
@@ -183,7 +184,7 @@
     }
 
     .container footer{
-        margin-top: 1em
+        margin-top: 2em
     }
     
 }
@@ -195,10 +196,29 @@
     /* mobile navbar */
     .container .mobilenav{
         background: #fff;
-        max-height: 0px;
+        position: absolute;
+        top: 0;
+        height: 0vh;
         opacity: 0;
+        width: 100%;
+        position: fixed;
+        padding: 2em;
         transition: 0.5s ease-in;
         overflow: hidden;
+    }
+
+    .container .mobilenav #icon{
+        display: flex;
+        justify-content: flex-end
+    }
+
+    .container .mobilenav #icon img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .container .mobilenav nav{
+        margin-top: 1em
     }
 
     .container .mobilenav nav ul{
@@ -209,16 +229,28 @@
     .container .mobilenav nav ul li{
         list-style-type: none;
         text-align: center;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em;
     }
 
     .container .mobilenav nav ul li a{
         color: black;
-        text-decoration: none
+        text-decoration: none;
+        font-size: 2rem;
+        color: #2151a1;
+        font-weight: bold
+    }
+
+    .container .mobilenav .bottom{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%
     }
 
     .container .navbar{
-        padding: 1em 2em
+        padding: 1em
     }
     
     .container .navbar .navright,#close{
@@ -253,9 +285,9 @@
         flex-direction: column;
     }
 
-    .container main div:nth-child(1){
+    /* .container main div:nth-child(1){
         grid-row: 2
-    }
+    } */
 
     .container main div:nth-child(1) h1{
         font-size: 3rem;
